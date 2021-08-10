@@ -15,6 +15,8 @@ RUN wget -nc -P /tmp/bitnami/pkg/cache/ https://downloads.bitnami.com/files/stac
     rm -rf /tmp/bitnami/pkg/cache/external-dns-0.9.0-0-linux-amd64-debian-10.tar.gz
 RUN chmod g+rwX /opt/bitnami
 
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
 ENV BITNAMI_APP_NAME="external-dns" \
     BITNAMI_IMAGE_VERSION="0.9.0-debian-10-r4" \
     PATH="/opt/bitnami/external-dns/bin:$PATH"
