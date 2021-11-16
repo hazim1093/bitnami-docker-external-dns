@@ -24,5 +24,5 @@ ENV BITNAMI_APP_NAME="external-dns" \
 EXPOSE 7979
 
 WORKDIR /opt/bitnami/external-dns
-USER 1001
+#USER 1001
 ENTRYPOINT [ "external-dns" ]
