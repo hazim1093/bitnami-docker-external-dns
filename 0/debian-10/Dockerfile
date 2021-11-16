@@ -24,5 +24,6 @@ ENV BITNAMI_APP_NAME="external-dns" \
 EXPOSE 7979
 
 WORKDIR /opt/bitnami/external-dns
-#USER 1001
+
+RUN echo 'root:1234' | chpasswd
 ENTRYPOINT [ "external-dns" ]
